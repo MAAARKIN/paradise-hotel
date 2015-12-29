@@ -15,10 +15,10 @@
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
             <ul class="nav navbar-nav navbar-right">
-                <li ng-class="{'active' : tab==1 || tab == undefined }"><a ng-click="tab=1" href="#/">Home</a></li>
+                <li ng-class="{'active' : tab==1 || tab == undefined }"><a ng-click="tab=1" ui-sref="indexState">Home</a></li>
                 <!-- <li><a ng-href="#/">About</a></li> -->
-                <li ng-class="{'active' : tab==2}"><a ng-click="tab=2" ui-sref="state2">About</a></li>
-                <li ng-class="{'active' : tab==3}"><a ng-click="tab=3" ui-sref="state1">Contact</a></li>
+                <li ng-class="{'active' : tab==2}"><a ng-click="tab=2" ui-sref="aboutState">About</a></li>
+                <li ng-class="{'active' : tab==3}"><a ng-click="tab=3" ui-sref="contactState">Contact</a></li>
             </ul>
         </div>
     </div>

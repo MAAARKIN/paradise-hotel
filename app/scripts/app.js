@@ -15,6 +15,7 @@ angular.module('paradiseHotelApp', ['ngCookies','ngMessages','ngResource','ngSan
 
     // Now set up the states
     $stateProvider
-    .state('state1', { url: '/', templateUrl: 'views/main.html', controller: 'MainCtrl' })
-    .state('state2', { url: '/about', templateUrl: 'views/about.html', controller: 'AboutCtrl' });
+    .state('indexState', { url: '/', templateUrl: 'views/main.html', controller: 'MainCtrl' })
+    .state('contactState', { url: '/contact', templateUrl: 'views/contact.html', controller: 'ContactCtrl' })
+    .state('aboutState', { url: '/about', templateUrl: 'views/about.html', controller: 'AboutCtrl' });
 });
