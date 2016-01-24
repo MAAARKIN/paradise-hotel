@@ -9,29 +9,39 @@
       <div class="col-md-6">
 
         <!-- NAME -->
-        <div class="form-group" ng-class="{'has-error': !contactForm.name.$valid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
+        <div class="form-group has-feedback" ng-class="{'has-error': !contactForm.name.$valid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
           <label for="contactName">Name</label>
-          <input type="text" class="form-control" name="name" ng-model="contact.name"
-          ng-minlength="5" ng-maxlength="20" id="contactName" placeholder="Name" required/>
+          <input type="text" class="form-control right-inner-addon input-sm" name="name" id="contactName" placeholder="Name"
+          ng-model="contact.name" ng-minlength="5" ng-maxlength="20" required/>
+          <span ng-show="contactForm.name.$valid && !contactForm.name.$pristine" class="glyphicon glyphicon-ok form-control-feedback" area-hidden='true'></span>
+
           <div ng-messages="contactForm.name.$error" ng-show="!contactForm.name.$pristine">
-            <p class="text-danger" ng-message="required">This field is required</p>
-            <!-- PUT MESSAGES IN MESSAGE.HTML and include here -->
+            <div ng-messages-include="views/includes/messages.html"></div>
           </div>
 
         </div>
         <!-- EMAIL -->
-        <div class="form-group">
+        <div class="form-group has-feedback" ng-class="{'has-error': !contactForm.email.$valid && !contactForm.email.$pristine, 'has-success': contactForm.email.$valid }">
           <label for="contactEmail">Email</label>
-          <input type="email" name="email" ng-model="contact.email" ng-required="true" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" class="form-control input-sm" id="contactEmail" placeholder="Email" required>
-          <span class="help-block" ng-show="!contactForm.email.$valid && !contactForm.email.$pristine">
-            teste email
-          </span>
+          <input type="email" class="form-control right-inner-addon input-sm" name="email" id="contactEmail" placeholder="Email"
+          ng-model="contact.email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+          <span ng-show="contactForm.email.$valid && !contactForm.email.$pristine" class="glyphicon glyphicon-ok form-control-feedback" area-hidden='true'></span>
+
+          <div ng-messages="contactForm.email.$error" ng-show="!contactForm.email.$pristine">
+            <div ng-messages-include="views/includes/messages.html"></div>
+          </div>
         </div>
 
         <!-- MESSAGE -->
-        <div class="form-group">
+        <div class="form-group has-feedback" ng-class="{'has-error': !contactForm.message.$valid && !contactForm.message.$pristine, 'has-success': contactForm.message.$valid }">
           <label for="contactMessage">Message</label>
-          <textarea rows="5" name="contact.message" ng-model="contact.message" class="form-control input-sm" id="contactMessage" placeholder="Tell-me what you want"/>
+          <textarea rows="5" name="message" class="form-control input-sm" id="contactMessage" placeholder="Tell-me what you want"
+          ng-model="contact.message" required/>
+          <span ng-show="contactForm.message.$valid && !contactForm.message.$pristine" class="glyphicon glyphicon-ok form-control-feedback" area-hidden='true'></span>
+
+          <div ng-messages="contactForm.message.$error" ng-show="!contactForm.message.$pristine">
+            <div ng-messages-include="views/includes/messages.html"></div>
+          </div>
         </div>
       </div>
 
@@ -48,10 +58,9 @@
       </div>
     </div>
 
-    <button type="submit" ng-click="sendContact(contact)" class="btn btn-success" ng-disabled="contactForm.$invalid" >Send</button>
+    <button type="submit" ng-click="sendContact(contact)" class="btn btn-success" ng-disabled="contactForm.$invalid">
+      Send
+    </button>
 
-    <!-- <div class="row">
-      Contact: {{contact}}
-    </div> -->
-  </form>
+</form>
 </div>
