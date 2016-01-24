@@ -8,10 +8,11 @@
  * Controller of the paradiseHotelApp
  */
 angular.module('paradiseHotelApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('AboutCtrl', function ($scope) {
+      $scope.map = {
+          center: {
+              latitude: -7.108183599999999,
+              longitude: -34.83250429999998
+          },
+          zoom: 16 };
   });

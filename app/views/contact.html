@@ -1,27 +1,57 @@
 <div class="container">
-    <fieldset>
-        <legend>Title </legend>
 
-        <form>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputFile">File input</label>
-                <input type="file" id="exampleInputFile">
-                <p class="help-block">Example block-level help text here.</p>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox"> Check me out
-                </label>
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-        </form>
-    </fieldset>
+  <div class="section_header">
+    <h2>Contact</h2>
+  </div>
+
+  <form class="form-horizontal" name="contactForm" novalidate>
+    <div class="row">
+      <div class="col-md-6">
+
+        <!-- NAME -->
+        <div class="form-group" ng-class="{'has-error': !contactForm.name.$valid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
+          <label for="contactName">Name</label>
+          <input type="text" class="form-control" name="name" ng-model="contact.name"
+          ng-minlength="5" ng-maxlength="20" id="contactName" placeholder="Name" required/>
+          <div ng-messages="contactForm.name.$error" ng-show="!contactForm.name.$pristine">
+            <p class="text-danger" ng-message="required">This field is required</p>
+            <!-- PUT MESSAGES IN MESSAGE.HTML and include here -->
+          </div>
+
+        </div>
+        <!-- EMAIL -->
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" name="email" ng-model="contact.email" ng-required="true" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" class="form-control input-sm" id="contactEmail" placeholder="Email" required>
+          <span class="help-block" ng-show="!contactForm.email.$valid && !contactForm.email.$pristine">
+            teste email
+          </span>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="form-group">
+          <label for="contactMessage">Message</label>
+          <textarea rows="5" name="contact.message" ng-model="contact.message" class="form-control input-sm" id="contactMessage" placeholder="Tell-me what you want"/>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="observation">
+          <h4>Observations</h4>
+          <hr>
+          <p>
+            Here we will put some text to show some Observations to the user.
+
+            teste
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" ng-click="sendContact(contact)" class="btn btn-success" ng-disabled="contactForm.$invalid" >Send</button>
+
+    <!-- <div class="row">
+      Contact: {{contact}}
+    </div> -->
+  </form>
 </div>

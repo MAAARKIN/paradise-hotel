@@ -1,18 +1,30 @@
 @font-face {
-    font-family: paradise;
-    src: url(/fonts/Paradise.ttf);
+  font-family: paradise;
+  src: url(/fonts/Paradise.ttf);
 }
 
 @font-face {
-    font-family: channel;
-    src: url(/fonts/Channel.ttf);
+  font-family: channel;
+  src: url(/fonts/Channel.ttf);
+}
+
+html {
+  height: 100%;
+  position: relative;
 }
 
 body {
-  padding-top: 80px;
+  height: 100%;
+  padding-top: 100px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+/*.header {
+  margin-bottom: 20px;
+}*/
+.navbar-default {
+  padding-bottom: 20px;
+}
+
 .marketing,
 .footer {
   padding-left: 15px;
@@ -74,66 +86,136 @@ body {
   }
 }
 
-.nivo-caption {
-    bottom: 50% !important;
-    /*margin: 0 auto !important;*/
-    /*margin-left: 10%;*/
-    /*max-width: 500px;*/
-    /*max-height: 200px;*/
-    /*opacity: 0.6;*/
+.section_header {
+  display: block;
+  margin: 10px 0 45px 0;
+  border-bottom: 1px dotted #e4e9f0;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.section_header h2 {
+  font-size: 22px;
+}
+
+.section_header h2,
+.section_header h3,
+.section_header h4 {
+  color: #555;
+  margin: 0 0 -2px 0;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: 2px solid #2D6167;
+}
+
+.center-content .col-md-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-item {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.portfolio-item h2 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0 0 25px 0;
+  color: #555;
+}
+
+.portfolio-item .description p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 18px;
+  color: #3F3F3F;
+}
+
+.observation {
+  position: relative;
+  padding: 15px 15px 15px;
+  margin: 0 -15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  -webkit-box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
+}
+
+.theme-default .nivoSlider {
+  margin-bottom: 0px !important;
+}
+
+.book {
+  background-color: #2C3E50;
+  min-height: 100px;
+  min-width: 300px;
+}
+
+.no-padding-left {
+  padding-left: 0px;
+}
+
+.book h3 {
+  color: #ffffff;
+}
+
+.font-white {
+  color: #ffffff
+}
+
+.book .reservation {
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .nivo-caption {
+    height: 100%;
     background-color: transparent !important;
-}
+  }
 
-@media (min-width: 768px) { 
-    .nivo-caption1 {
-        margin-left: 10%;
-        left: 0;
-        max-width:500px;
-        font-size:38px;
-        line-height:40px;
-        text-transform:none;
-    }
-    .nivo-caption1a {
-        margin-left: 10%;
-        left: 0;
-        font-size:12px;
-        line-height:14px;
-        text-transform:none;
-    }
-    .nivo-caption2 {
-        margin-left:230px;
-        margin-top:10px;
-        width:350px;
-    }
-    .nivo-caption3 {
-        margin-left:10px;
-        margin-top:100px;
-        width:350px;
-    }    
-}
-
-.nivo-caption1 {
+  .nivo-caption1 {
+    margin-top: 15%;
     margin-left: 10%;
-    left: 0;
-    max-width:500px;
+    max-width:600px;
+  }
+
+  .nivo-caption1 .title {
     font-size:38px;
     line-height:40px;
+  }
+
+  .nivo-caption1 .description {
+    font-size:15px;
+    line-height:17px;
     text-transform:none;
-}
-.nivo-caption1a {
-    margin-left: 10%;
-    left: 0;
-    font-size:12px;
-    line-height:14px;
+  }
+  .nivo-caption2 {
+    margin-top: 18%;
+    max-width:600px;
+    margin-right: 10px;
+    margin-left: auto;
+  }
+
+  .nivo-caption2 .title {
+    font-size:38px;
+    line-height:40px;
+  }
+
+  .nivo-caption2 .description {
+    font-size:15px;
+    line-height:17px;
     text-transform:none;
+  }
+
+  .observation {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
-.nivo-caption2 {
-    margin-left:230px;
-    margin-top:10px;
-    width:350px;
-}
-.nivo-caption3 {
-    margin-left:10px;
-    margin-top:100px;
-    width:350px;
-}    

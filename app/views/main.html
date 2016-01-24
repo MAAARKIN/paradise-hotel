@@ -1,8 +1,14 @@
+<style media="screen">
+    body {
+        padding-top: 80px;
+    }
+</style>
 <script type="text/javascript">
     $(window).ready(function() {
     $('#slider').nivoSlider({
         effect: 'fade',
-        pauseTime: 50000
+        pauseTime: 30000,
+        controlNav: false
     });
 });
 
@@ -11,56 +17,111 @@
 <div class="slider-wrapper theme-default">
     <div class="ribbon"></div>
     <div id="slider" class="nivoSlider">
-        <img src="http://windows10wallpaper.net/wp-content/uploads/2015/12/Luxurious-Grand-Hotel-wallpapers.jpeg" alt="" title="#htmlcaption" />
-        <img src="http://www.travelliada.com/wp-content/uploads/2015/05/cb094503817101557421759f0ae2aa2c_large1.jpeg" alt="" title="#htmlcaption2" />
-        <img src="http://puntomhotel.esy.es/images/6.jpg" alt="" title="#htmlcaption3" />
+        <img src="http://hotelesoriginales.com/wp-content/uploads/2012/12/main-accommodation-guest-rooms.jpg" alt="" title="#htmlcaption" />
+        <img src="http://www.tasteibiza.com/wp-content/uploads/2014/11/Sunseeker-Predator-60-2.jpg" alt="" title="#htmlcaption2" />
+        <img src="https://www.cedarberg-travel.com/wp-content/uploads/cedarberg-mweya-safari-lodge-4.jpg" alt="" title="#htmlcaption3" />
     </div>
     <div id="htmlcaption" class="nivo-html-caption">
         <!--<h2><b>Bem vindo ao Paradise Hotel</b></h2>
         <strong>This is an example of a <em>HTML</em> caption with <a href="#">a link</a>.</strong>-->
         <div class="nivo-caption1">
-            How to choose the Right Sofa for Your Room
-            <!--<h2><b>Bem vindo ao Paradise Hotel</b></h2>-->
-        </div>
-        <div class="nivo-caption1a">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-            <a href="./index.html">tempor incididunt</a>  
-            ut labore et dolore magna aliqua.
+            <div class="title">
+                Bem vindo ao Paradise Hotel
+            </div>
+            <div class="description">
+                Seu descanso no melhor hotel da cidade.
+            </div>
         </div>
     </div>
     <div id="htmlcaption2" class="nivo-html-caption">
-        <div class="nivo-caption2" >How to choose the Right Sofa for Your Room 2</div>
-        <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-            <a href="./index.html">tempor incididunt</a>  
-            ut labore et dolore magna aliqua.
+        <div class="nivo-caption2">
+            <div class="title">
+                Conforto para você e sua familia!
+            </div>
+            <div class="description">
+                Reserve agora mesmo um quarto para você e sua família desfrutar do melhor conforto do nosso Hotel.
+            </div>
         </div>
     </div>
 
-    <div id="htmlcaption1" class="nivo-html-caption">
-        <div class="nivo-caption1">How to choose the Right Sofa for Your Room 3</div>
-        <div class="nivo-caption1a">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-            <a href="./index.html">tempor incididunt</a>  
-            ut labore et dolore magna aliqua.
+    <div id="htmlcaption3" class="nivo-html-caption">
+        <div class="nivo-caption1">
+            <div class="title">
+                <p>Conforto Paradise!</p>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="book">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-2 col-sm-2">
+        <h3>Booking</h3>
+      </div>
+
+      <div class="col-md-10 col-sm-10 reservation">
+        <!-- <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre> -->
+        <!-- <pre>Selected date is: <em>{{today | date:'dd/MM/yyyy'}}</em></pre> -->
+        <form>
+          <div class="col-md-3 no-padding-left">
+            <label class="font-white" for="">Data de Entrada</label>
+            <div class="input-group date" data-provide="datepicker"
+            data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+            data-date-today-highlight="true" data-date-start-date="{{dt | date:'dd/MM/yyyy'}}">
+              <input type="text" ng-model="dt" class="form-control" />
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 no-padding-left">
+            <label class="font-white" for="">Data de Saída</label>
+            <div class="input-group date" data-provide="datepicker"
+            data-date-format="dd/mm/yyyy" data-date-language="pt-BR"
+            data-date-today-highlight="true" data-date-start-date="{{today | date:'dd/MM/yyyy'}}">
+              <input type="text" ng-model="dt" class="form-control" />
+              <div class="input-group-addon">
+                <span class="glyphicon glyphicon-th"></span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 <div class="container">
 
-    <div class="row marketing">
-        <h4>HTML5 Boilerplate</h4>
-        <p>
-            HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-        </p>
-
-        <h4>Angular</h4>
-        <p>
-            AngularJS is a toolset for building the framework most suited to your application development.
-        </p>
-
-        <h4>Karma</h4>
-        <p>Spectacular Test Runner for JavaScript.</p>
+    <div class="section_header">
+        <h2>Our Services</h2>
     </div>
+
+    <div class="row center-content">
+        <div class="col-md-4">
+            <img class="img-circle" src="http://www.hotelpalomar-dc.com/design/images/square/dcp-13.png" alt="Generic placeholder image" width="180" height="180">
+            <h2>Service 1</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-md-4">
+            <img class="img-circle" src="http://www.cameredelre.com/wp-content/uploads/2014/06/pic-hotel-services.jpg" alt="Generic placeholder image" width="180" height="180">
+            <h2>Service 2</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-md-4">
+            <img class="img-circle" src="http://www.hotelnavarra.com/img/archief/fototheek/Hotel%20Navarra/Hotel%20Accommodation/Bar/Room%20Service/BrugesHotelNavarraBarRoomService02.jpg" alt="Generic placeholder image" width="180" height="180">
+            <h2>Service 3</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
 </div>

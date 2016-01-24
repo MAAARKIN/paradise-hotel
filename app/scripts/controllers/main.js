@@ -8,10 +8,10 @@
  * Controller of the paradiseHotelApp
  */
 angular.module('paradiseHotelApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($state, $scope, moment) {
+    // moment.locale('pt-br');
+    console.log($state.current);
+    $scope.today = new Date();
+    $scope.dt = moment().format('L');
+
   });
