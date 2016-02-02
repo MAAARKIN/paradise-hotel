@@ -57,7 +57,7 @@
   <script src="bower_components/lodash/lodash.min.js"></script>
   <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
   <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
-  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <!-- <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script> this is not more needed-->
   <script src="bower_components/moment/locale/pt-br.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/js/bootstrap-datepicker.js"></script>
@@ -68,11 +68,12 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
   <script src="scripts/config.js"></script>
-  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/MainCtrl.js"></script>
   <script src="scripts/controllers/AboutCtrl.js"></script>
   <script src="scripts/controllers/UserCtrl.js"></script>
   <script src="scripts/controllers/RoomCtrl.js"></script>
   <script src="scripts/controllers/ContactCtrl.js"></script>
+  <script src="scripts/services/ContactService.js"></script>
   <!-- endbuild -->
 
 </body>

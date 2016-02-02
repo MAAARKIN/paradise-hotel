@@ -24,6 +24,7 @@ angular.module('paradiseHotelApp', [
 
     // Now set up the states
     $stateProvider
+    // .state('indexState', { url: '/', templateUrl: 'views/main.html', controller: 'MainCtrl', paramNew: "Marcos Filho"})
     .state('indexState', { url: '/', templateUrl: 'views/main.html', controller: 'MainCtrl'})
     .state('roomState', { url: '/rooms', templateUrl: 'views/room.html', controller: 'RoomCtrl' })
     .state('contactState', { url: '/contact', templateUrl: 'views/contact.html', controller: 'ContactCtrl' })

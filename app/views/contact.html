@@ -11,8 +11,8 @@
         <!-- NAME -->
         <div class="form-group has-feedback" ng-class="{'has-error': !contactForm.name.$valid && !contactForm.name.$pristine, 'has-success': contactForm.name.$valid }">
           <label for="contactName">Name</label>
-          <input type="text" class="form-control right-inner-addon input-sm" name="name" id="contactName" placeholder="Name"
-          ng-model="contact.name" ng-minlength="5" ng-maxlength="20" required/>
+          <input type="text" class="form-control right-inner-addon input-sm" id="contactName" placeholder="Name"
+          name="name" ng-model="contact.name" ng-minlength="5" ng-maxlength="20" required/>
           <span ng-show="contactForm.name.$valid && !contactForm.name.$pristine" class="glyphicon glyphicon-ok form-control-feedback" area-hidden='true'></span>
 
           <div ng-messages="contactForm.name.$error" ng-show="!contactForm.name.$pristine">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col-md-6">
         <div class="observation">
           <h4>Observations</h4>
@@ -62,5 +62,5 @@
       Send
     </button>
 
-</form>
+  </form>
 </div>
