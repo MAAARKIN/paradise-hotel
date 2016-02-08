@@ -8,7 +8,7 @@
  * Controller of the paradiseHotelApp
  */
 angular.module('paradiseHotelApp')
-  .controller('MainCtrl', function ($state, $scope, moment) {
+  .controller('MainCtrl', function ($state, $scope, moment, localStorageService) {
     // moment.locale('pt-br');
     // console.log($state.current);
     // console.log($state.current.paramNew); //get a new field declared in state.
