@@ -9,7 +9,7 @@
 */
 var service = angular.module('paradiseHotelApp');
 
-service.factory('AuthService', function($http, localStorageService, API, jwtHelper, $rootScope) {
+service.factory('AuthService', function($http, localStorageService, API, $rootScope) {
   return {
     login: function(credentials) {
       console.log(API);
@@ -18,20 +18,20 @@ service.factory('AuthService', function($http, localStorageService, API, jwtHelp
           "Content-Type": "application/json"
         }
       }).then(function(response) {
-        console.log("salvando token");
-        var tokenPayload = jwtHelper.decodeToken(response.data.token);
+        // console.log("salvando token");
+        // var tokenPayload = jwtHelper.decodeToken(response.data.token);
+        //
+        // var expiration = jwtHelper.getTokenExpirationDate(response.data.token);
+        // console.log(expiration);
+        //
+        // var bool = jwtHelper.isTokenExpired(response.data.token);
+        // console.log(bool);
 
-        var expiration = jwtHelper.getTokenExpirationDate(response.data.token);
-        console.log(expiration);
-
-        var bool = jwtHelper.isTokenExpired(response.data.token);
-        console.log(bool);
-
-        $rootScope.currentUser = {
-          "username": tokenPayload.sub,
-          "roles": tokenPayload.roles
-        }
-        console.log(tokenPayload);
+        // $rootScope.currentUser = {
+        //   "username": tokenPayload.sub,
+        //   "roles": tokenPayload.roles
+        // }
+        // console.log(tokenPayload);
         localStorageService.set('token', response.data.token);
         return response;
       }, function (error) {

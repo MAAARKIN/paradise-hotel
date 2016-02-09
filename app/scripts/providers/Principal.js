@@ -7,9 +7,9 @@
 * # myService
 * Service in the blogApp.
 */
-var component = angular.module('paradiseHotelApp');
+var service = angular.module('paradiseHotelApp');
 
-component.factory('Principal', function(localStorageService, jwtHelper) {
+service.factory('Principal', function(localStorageService, jwtHelper) {
   return {
     isAuthenticated: function() {
       if (localStorageService.get('token')) {

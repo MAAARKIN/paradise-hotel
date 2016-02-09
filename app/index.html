@@ -11,8 +11,13 @@
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- build:css(app) styles/vendor.css -->
+  <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/nivo-slider/nivo-slider.css">
   <link rel="stylesheet" href="styles/nivo-slider/theme/default/default.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/css/bootstrap-datepicker.css">
@@ -37,7 +42,7 @@
   ga('send', 'pageview');
   </script>
 
-  <!-- build:js(.) scripts/vendor.js -->
+  <!-- build:js(app) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -59,12 +64,10 @@
   <script src="bower_components/lodash/lodash.min.js"></script>
   <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
   <script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
-  <!-- <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script> this is not more needed-->
   <script src="bower_components/moment/locale/pt-br.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/js/bootstrap-datepicker.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.1/locales/bootstrap-datepicker.pt-BR.min.js"></script>
-  <!-- <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script> -->
 
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -75,9 +78,11 @@
   <script src="scripts/controllers/UserCtrl.js"></script>
   <script src="scripts/controllers/RoomCtrl.js"></script>
   <script src="scripts/controllers/ContactCtrl.js"></script>
+  <script src="scripts/controllers/LoginCtrl.js"></script>
   <script src="scripts/services/ContactService.js"></script>
   <script src="scripts/services/AuthService.js"></script>
   <script src="scripts/interceptors/TokenInterceptor.js"></script>
+  <script src="scripts/components/Principal.js"></script>
   <!-- endbuild -->
 
 </body>
