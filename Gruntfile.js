@@ -1,4 +1,4 @@
-// Generated on 2015-12-26 using generator-angular 0.15.1
+// Generated on 2016-02-09 using generator-angular 0.15.1
 'use strict';
 
 // # Globbing
@@ -73,7 +73,7 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        // livereload: 35729
       },
       livereload: {
         options: {
@@ -163,7 +163,11 @@ module.exports = function (grunt) {
           src: [
             '.tmp',
             '<%= yeoman.dist %>/{,*/}*',
-            '!<%= yeoman.dist %>/.git{,*/}*'
+            '!<%= yeoman.dist %>/.git{,*/}*',
+            '!<%= yeoman.dist %>/Procfile',
+            '!<%= yeoman.dist %>/package.json',
+            '!<%= yeoman.dist %>/web.js',
+            '!<%= yeoman.dist %>/node_modules'
           ]
         }]
       },
@@ -211,14 +215,14 @@ module.exports = function (grunt) {
         fileTypes:{
           js: {
             block: /(([\s\t]*)\/{2}\s*?bower:\s*?(\S*))(\n|\r|.)*?(\/{2}\s*endbower)/gi,
-              detect: {
-                js: /'(.*\.js)'/gi
-              },
-              replace: {
-                js: '\'{{filePath}}\','
-              }
+            detect: {
+              js: /'(.*\.js)'/gi
+            },
+            replace: {
+              js: '\'{{filePath}}\','
             }
           }
+        }
       }
     },
 
@@ -377,10 +381,12 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,gif}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'images/**/*.{ico,png,txt,gif}',
+            'fonts/*.*'
           ]
         }, {
           expand: true,
@@ -416,7 +422,6 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     },
-
     // Test settings
     karma: {
       unit: {
@@ -467,11 +472,11 @@ module.exports = function (grunt) {
     'ngAnnotate',
     'copy:dist',
     'cdnify',
-    // 'cssmin',
-    // 'uglify',
+    'cssmin',
+    'uglify',
     'filerev',
     'usemin',
-    // 'htmlmin'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
