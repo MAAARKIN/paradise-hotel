@@ -19,11 +19,14 @@ component.factory('Principal', function(localStorageService, jwtHelper) {
     },
 
     getCurrentUser: function() {
+      var currentUser = {};
       var token = localStorageService.get('token');
-      var plainContent = jwtHelper.decodeToken(token);
-      var currentUser = {
-        "username":token.sub
-      };
+      if(token) {
+        var plainContent = jwtHelper.decodeToken(token);
+        currentUser = {
+          "username":token.sub
+        };
+      }
       return currentUser;
     }
   };
