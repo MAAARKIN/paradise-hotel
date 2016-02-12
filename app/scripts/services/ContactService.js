@@ -9,8 +9,8 @@
 */
 var service = angular.module('paradiseHotelApp');
 
-service.factory('ContactService', ['$resource', 'myConfig', function($resource, API) {
+service.factory('ContactService', function($resource, API) {
   return $resource(API + '/contacts/:id', {}, {
     query: { method:'GET', isArray:false }
   });
-}]);
+});

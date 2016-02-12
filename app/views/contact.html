@@ -35,8 +35,7 @@
         <!-- MESSAGE -->
         <div class="form-group has-feedback" ng-class="{'has-error': !contactForm.message.$valid && !contactForm.message.$pristine, 'has-success': contactForm.message.$valid }">
           <label for="contactMessage">Message</label>
-          <textarea rows="5" name="message" class="form-control input-sm" id="contactMessage" placeholder="Tell-me what you want"
-          ng-model="contact.message" required/>
+          <textarea rows="5" name="message" class="form-control input-sm" id="contactMessage" placeholder="Tell-me what you want" ng-model="contact.message" required></textarea>
           <span ng-show="contactForm.message.$valid && !contactForm.message.$pristine" class="glyphicon glyphicon-ok form-control-feedback" area-hidden='true'></span>
 
           <div ng-messages="contactForm.message.$error" ng-show="!contactForm.message.$pristine">
